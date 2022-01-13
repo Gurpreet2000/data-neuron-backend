@@ -3,12 +3,10 @@ dotenv.config();
 import express from 'express';
 import mongoose from 'mongoose';
 import ContentRoutes from './routes/content.js';
-import cors from 'cors';
 const app = express();
 
 mongoose.connect(process.env.DATABASE);
 
-app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
